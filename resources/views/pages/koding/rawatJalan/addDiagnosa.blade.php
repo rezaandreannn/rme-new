@@ -37,7 +37,7 @@
 
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h4 class="card-title">Add Diagnosa Pemeriksaan Dokter</h4>
+                        <h4 class="card-title">Add Diagnosa Pemeriksaan Dokterr</h4>
                     </div>
                     <!-- include form -->
                     <div class="card-body">

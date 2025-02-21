@@ -16,6 +16,27 @@
             <li class="{{ Request::is('booking-operasi*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('operasi.booking.index') }}"><i class="fas fa-book"></i> <span>Booking Operasi</span></a></li>
             @endcan --}}
             {{-- booking operasi --}}
+
+            <li class="nav-item dropdown ">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-notes-medical"></i> <span>Kunjungan Pasien</span></a>
+
+                <ul class="dropdown-menu">
+                    <li class="">
+                        <a class="nav-link" href="">Poliklinik</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="">Rawat Inap</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="">IGD</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="">IBS</a>
+                    </li>
+                </ul>
+            </li>
+
+
             @endcan
             @can('riwayat medis')
             <li class="nav-item dropdown {{ Request::is('riwayat-medis*') ? 'active' : '' }}">

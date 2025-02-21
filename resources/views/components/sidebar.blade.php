@@ -22,7 +22,7 @@
 
                 <ul class="dropdown-menu">
                     <li class="">
-                        <a class="nav-link" href="">Poliklinik</a>
+                        <a class="nav-link" href="{{ route('poliklinik.index') }}">Poliklinik</a>
                     </li>
                     <li class="">
                         <a class="nav-link" href="">Rawat Inap</a>

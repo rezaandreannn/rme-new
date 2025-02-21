@@ -68,4 +68,35 @@ class PendaftaranService
             ];
         }));
     }
+
+    public function listPasien ($kode_dokter,$tanggal){
+        // $date = date('Y-m-d');
+        $dbpku = DB::connection('pku')->getDatabaseName();
+        $data = DB::connection('db_rsmm')
+            ->table('ANTRIAN as a')
+            ->Join('REGISTER_PASIEN as rp', 'a.No_MR', '=', 'rp.No_MR')
+            ->Join('PENDAFTARAN as p', 'a.No_MR', '=', 'p.No_MR')
+            ->Join('DOKTER as d', 'p.Kode_Dokter', '=', 'd.Kode_Dokter')
+            ->select(
+                'a.No_Ponsel as no_hp',
+                'a.Nomor as nomor_antrean',
+                'a.No_MR as no_mr',
+                'a.Tanggal as tanggal',
+                'a.Dokter as kode_dokter',
+                'a.Jenis as jenis_pasien',
+                'a.Status as created_by',
+                'rp.Nama_Pasien as nama_pasien',
+                'rp.No_Identitas',
+                'rp.Alamat',
+                'p.No_Reg',
+                'd.SPESIALIS',
+            )
+            ->where('a.Dokter', $kode_dokter)
+            ->where('p.Kode_Dokter', $kode_dokter)
+            ->where('a.Tanggal', $tanggal)
+            ->where('p.Tanggal', $tanggal)
+            ->orderBy('a.Nomor', 'ASC')
+            ->get()->toArray();
+        return $data;
+    }
 }

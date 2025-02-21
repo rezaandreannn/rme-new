@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestingDataController;
 use App\Models\Simrs\Ruang;
 use App\Models\Simrs\Bangsal;
 use App\Models\Simrs\Pendaftaran;
@@ -19,3 +20,6 @@ Route::prefix('test')->group(function () {
         dd($t->byKodeBangsal());
     });
 });
+
+Route::get('kunjungan', [TestingDataController::class, 'index'])->name('kunjungan.index');
+Route::get('penunjang/{noReg}', [TestingDataController::class, 'create'])->name('kunjungan.create');

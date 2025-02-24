@@ -879,6 +879,7 @@ select.form-control:not([size]):not([multiple]) {
 .card .card-header .form-control + .input-group-btn .btn {
     margin-top: -1px;
 }
+
 .card .card-header h4 {
     font-size: 16px;
     line-height: 28px;

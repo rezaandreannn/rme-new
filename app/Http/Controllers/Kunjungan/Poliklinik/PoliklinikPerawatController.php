@@ -45,8 +45,11 @@ class PoliklinikPerawatController extends Controller
     {
         $title = $this->prefix . ' ' . 'Detail';
         $biodata = $this->rajal->pasien_bynoreg($noReg);
+        // dd($biodata);
+        $masalah_perawatan = $this->rajal->masalah_perawatan();
+        $rencana_perawatan = $this->rajal->rencana_perawatan();
 
-        return view($this->view . 'entry', compact('title', 'biodata'));
+        return view($this->view . 'entry', compact('title', 'biodata', 'masalah_perawatan', 'rencana_perawatan'));
     }
 
     /**

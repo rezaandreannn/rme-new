@@ -43,7 +43,6 @@ class ListDataPasienController extends Controller
 
         $dateNow = date('Y-m-d');
 
-
         $pasiens = collect();
 
         if (auth()->user()->hasRole('super-admin')) {
@@ -68,7 +67,6 @@ class ListDataPasienController extends Controller
         } else {
             // Jika user tidak memiliki role yang dikenali, kosongkan hasil
             $dokters = collect();
-            $pasiens = collect();
         }
 
 

@@ -116,11 +116,7 @@
                                         @endif --}}
                         </td>
                         <td width="40%">
-                            {{-- @if($item->FS_STATUS != '')
-                                        <a href="{{ route('rj.edit', $item->No_Reg )}}" class="btn btn-sm btn-primary"><i class="fas fa-notes-medical"></i> Edit</a>
-                            @else
-                            @endif --}}
-                            <a href="{{ route('pelayanan.poliklinik.detail', $pasien->No_Reg )}}" class="btn btn-sm btn-primary"><i class="fas fa-notes-medical"></i> Detail</a>
+                            <a href="{{ route('pelayanan.poliklinik.detail', $pasien->No_Reg )}}" class="btn btn-sm btn-primary"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                     </tr>
                     @empty

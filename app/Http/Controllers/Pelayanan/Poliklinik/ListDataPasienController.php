@@ -77,6 +77,7 @@ class ListDataPasienController extends Controller
     {
         $title = $this->prefix . ' ' . 'Detail';
         $biodata = $this->rajal->pasien_bynoreg($noReg);
+
         // dd($biodata);
         $masalah_perawatan = $this->rajal->masalah_perawatan();
         $rencana_perawatan = $this->rajal->rencana_perawatan();

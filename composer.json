@@ -18,6 +18,7 @@
         "virusphp/bridging-bpjs": "^2.1"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.15",
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.19",
         "laravel/sail": "^1.0.1",

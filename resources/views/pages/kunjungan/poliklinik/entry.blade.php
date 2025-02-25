@@ -71,6 +71,7 @@
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0 text-primary">Riwayat Medis Pasien</h5>
                     <div class="card-header-action">
+                      
                         <a data-collapse="#mycard-collapse" class="btn btn-info btn-sm p-0 d-flex align-items-center justify-content-center" 
                            style="width: 30px; height: 30px; border-radius: 50%;">
                             <i class="fas fa-minus"></i>

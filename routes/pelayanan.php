@@ -9,5 +9,6 @@ Route::prefix('pelayanan')->name('pelayanan.')->middleware('auth')->group(functi
     // routing  untuk rawat jalan
     Route::prefix('poliklinik')->name('poliklinik.')->group(function () {
         Route::get('list-px', [ListDataPasienController::class, 'index'])->name('list-px');
+        Route::get('/detail/{noReg}', [ListDataPasienController::class, 'detail'])->name('detail');
     });
 });

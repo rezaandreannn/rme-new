@@ -87,6 +87,7 @@ class AssesmenController extends Controller
     {
         $title = $this->prefix . ' ' . 'Resume Pasien';
         $data = $this->rajal->history($noMR);
+        // dd($data);
         $pasien = $this->pasien->biodataPasienByMr($noMR);
         return view($this->view . 'perawat.history', compact('title', 'data', 'pasien'));
     }

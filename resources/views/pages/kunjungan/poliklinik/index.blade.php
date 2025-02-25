@@ -119,11 +119,9 @@
                             {{-- @if($item->FS_STATUS != '')
                                         <a href="{{ route('rj.edit', $item->No_Reg )}}" class="btn btn-sm btn-primary"><i class="fas fa-notes-medical"></i> Edit</a>
                             @else
-                            <a href="{{ route('poliklinik.entry', $item->No_Reg )}}" class="btn btn-sm btn-primary"><i class="fas fa-notes-medical"></i> Entry</a>
                             @endif --}}
-                            detail
+                            <a href="{{ route('pelayanan.poliklinik.detail', $pasien->No_Reg )}}" class="btn btn-sm btn-primary"><i class="fas fa-notes-medical"></i> Detail</a>
                         </td>
-
                     </tr>
                     @empty
 

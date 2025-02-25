@@ -74,4 +74,15 @@ class ListDataPasienController extends Controller
 
         return view($this->view . 'index', compact('title', 'dokters', 'showForm', 'pasiens'));
     }
+
+    public function detail($noReg)
+    {
+        $title = $this->prefix . ' ' . 'Detail';
+        $biodata = $this->rajal->pasien_bynoreg($noReg);
+        // dd($biodata);
+        $masalah_perawatan = $this->rajal->masalah_perawatan();
+        $rencana_perawatan = $this->rajal->rencana_perawatan();
+
+        return view($this->view . 'detail', compact('title', 'biodata', 'masalah_perawatan', 'rencana_perawatan'));
+    }
 }

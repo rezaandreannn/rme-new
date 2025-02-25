@@ -43,7 +43,6 @@ class ListDataPasienController extends Controller
 
         $dateNow = date('Y-m-d');
 
-
         $pasiens = collect();
 
         if (auth()->user()->hasRole('super-admin')) {
@@ -68,7 +67,6 @@ class ListDataPasienController extends Controller
         } else {
             // Jika user tidak memiliki role yang dikenali, kosongkan hasil
             $dokters = collect();
-            $pasiens = collect();
         }
 
 
@@ -79,6 +77,7 @@ class ListDataPasienController extends Controller
     {
         $title = $this->prefix . ' ' . 'Detail';
         $biodata = $this->rajal->pasien_bynoreg($noReg);
+
         // dd($biodata);
         $masalah_perawatan = $this->rajal->masalah_perawatan();
         $rencana_perawatan = $this->rajal->rencana_perawatan();

@@ -41,6 +41,17 @@ class TestingDataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD:app/Http/Controllers/Kunjungan/Poliklinik/PoliklinikPerawatController.php
+    public function entry($noReg)
+    {
+        $title = $this->prefix . ' ' . 'Detail';
+        $biodata = $this->rajal->pasien_bynoreg($noReg);
+        // dd($biodata);
+        $masalah_perawatan = $this->rajal->masalah_perawatan();
+        $rencana_perawatan = $this->rajal->rencana_perawatan();
+
+        return view($this->view . 'entry', compact('title', 'biodata', 'masalah_perawatan', 'rencana_perawatan'));
+=======
 
     //  data penunjang EMR
     public function create($noReg)
@@ -55,6 +66,7 @@ class TestingDataController extends Controller
         dd($rads);
 
         // penunjang lab radioologi dan resep
+>>>>>>> main:app/Http/Controllers/TestingDataController.php
     }
 
     /**

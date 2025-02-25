@@ -102,7 +102,7 @@
                                   <div class="accordion-header" role="button" data-toggle="collapse" data-target=".rawatjalan-panel-{{ $i }}" aria-expanded="true">
                                     <h5>Panel {{ $i }}</h5>
                                   </div>
-                                  <div class="accordion-body collapse @if($i == 1) show @endif rawatjalan-panel-{{ $i }}">
+                                  <div class="accordion-body collapse @if($i == 1) @endif rawatjalan-panel-{{ $i }}">
                                     <div class="table-responsive">
                                       <table class="table table-bordered table-sm">
                                         <thead>

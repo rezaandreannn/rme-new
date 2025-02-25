@@ -157,98 +157,6 @@
             </div>
         </div>
 
-        <!-- Tutup Detail Pasien -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h4>List Pasien</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12 col-lg-8 offset-lg-2">
-                                <div class="wizard-steps">
-                                    <div class="wizard-step wizard-step-active" data-step="1">
-                                        <div class="wizard-step-icon">
-                                            <i class="fas fa-book"></i>
-                                        </div>
-                                        <div class="wizard-step-label">Riwayat</div>
-                                    </div>
-                                    <div class="wizard-step" data-step="2">
-                                        <div class="wizard-step-icon">
-                                            <i class="fas fa-stethoscope"></i>
-                                        </div>
-                                        <div class="wizard-step-label">Asesmen</div>
-                                    </div>
-                                    <div class="wizard-step" data-step="3">
-                                        <div class="wizard-step-icon">
-                                            <i class="fas fa-vial"></i>
-                                        </div>
-                                        <div class="wizard-step-label">Penunjang</div>
-                                    </div>
-                                    <div class="wizard-step" data-step="4">
-                                        <div class="wizard-step-icon">
-                                            <i class="fas fa-briefcase-medical"></i>
-                                        </div>
-                                        <div class="wizard-step-label">Tindakan</div>
-                                    </div>
-                                    <div class="wizard-step" data-step="5">
-                                        <div class="wizard-step-icon">
-                                            <i class="fas fa-notes-medical"></i>
-                                        </div>
-                                        <div class="wizard-step-label">Resep</div>
-                                    </div>
-                                    <div class="wizard-step" data-step="6">
-                                        <div class="wizard-step-icon">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <div class="wizard-step-label">Selesai</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Step 1 -->
-                        <div class="wizard-pane" data-step="1">
-                            <div class="col-12 col-md-12">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-md">
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Tanggal</th>
-                                            <th>Dokter</th>
-                                            <th>Subjective, Objective, Assesment, Planning</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2017-01-09</td>
-                                            <td>Dr Toumi</td>
-                                            <td></td>
-                                            <td>
-                                                <div class="badge badge-success">Rawat Jalan</div>
-                                            </td>
-                                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-<<<<<<< HEAD
-                          </div>
-              
-                          <!-- Tab Pane Placeholder -->
-                          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"></div>
-                          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                            <p>Lorem ipsum dolor sit amet...</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-              
-            <!-- Tutup Detail Pasien -->
             <div class="row">
               <div class="col-12">
                 <div class="card card-primary">
@@ -268,32 +176,32 @@
                   </div>
                   <div class="card-body">
                        <!-- Step 1 -->
-                      <div class="wizard-pane" data-step="1">
-                        <div class="col-12 col-md-12">
-                            <div class="table-responsive">
-                              <table class="table table-bordered table-md">
-                                  <tr>
-                                    <th>#</th>
-                                    <th>Tanggal</th>
-                                    <th>Dokter</th>
-                                    <th>Subjective, Objective, Assesment, Planning</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                  </tr>
-                                  <tr>
-                                    <td>1</td>
-                                    <td>2017-01-09</td>
-                                    <td>Dr Toumi</td>
-                                    <td></td>
-                                    <td><div class="badge badge-success">Rawat Jalan</div></td>
-                                    <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                                  </tr>
-                              </table>
-=======
-                            <div class="text-right">
-                                <button type="button" class="btn btn-primary next-step">Next <i class="fas fa-arrow-right"></i></button>
->>>>>>> b464f036a6dab30dd4942ebfe650a92dc4be3e68
-                            </div>
+                        <div class="wizard-pane" data-step="1">
+                          <div class="col-12 col-md-12">
+                              <div class="table-responsive">
+                                <table class="table table-bordered table-md">
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Tanggal</th>
+                                      <th>Dokter</th>
+                                      <th>Subjective, Objective, Assesment, Planning</th>
+                                      <th>Status</th>
+                                      <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>2017-01-09</td>
+                                      <td>Dr Toumi</td>
+                                      <td></td>
+                                      <td><div class="badge badge-success">Rawat Jalan</div></td>
+                                      <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                    </tr>
+                                </table>
+                              </div>
+                              <div class="text-right">
+                                  <button type="button" class="btn btn-primary next-step">Next <i class="fas fa-arrow-right"></i></button>
+                              </div>
+                          </div>
                         </div>
                         <!-- Step 2 -->
                         <div class="wizard-pane active" data-step="2">
@@ -635,7 +543,6 @@
 </script>
 
 <script>
-<<<<<<< HEAD
   document.querySelectorAll('.wizard-steps button').forEach(button => {
     button.addEventListener('click', function() {
       const step = this.getAttribute('data-step');
@@ -661,57 +568,6 @@
   .wizard-pane[data-step="1"] {
     display: block;
   }
-</style>
-=======
-    document.addEventListener('DOMContentLoaded', function() {
-        const nextButtons = document.querySelectorAll('.next-step');
-        const prevButtons = document.querySelectorAll('.prev-step');
-        const steps = document.querySelectorAll('.wizard-step');
-        const panes = document.querySelectorAll('.wizard-pane');
-        let currentStep = 1;
->>>>>>> b464f036a6dab30dd4942ebfe650a92dc4be3e68
-
-        function showStep(step) {
-            panes.forEach(pane => {
-                pane.classList.toggle('active', parseInt(pane.dataset.step) === step);
-            });
-            steps.forEach(wizardStep => {
-                wizardStep.classList.toggle('wizard-step-active', parseInt(wizardStep.dataset.step) === step);
-            });
-        }
-
-        nextButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (currentStep < steps.length) {
-                    currentStep++;
-                    showStep(currentStep);
-                }
-            });
-        });
-
-        prevButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (currentStep > 1) {
-                    currentStep--;
-                    showStep(currentStep);
-                }
-            });
-        });
-
-        showStep(currentStep);
-    });
-
-</script>
-
-<style>
-    .wizard-pane {
-        display: none;
-    }
-
-    .wizard-pane.active {
-        display: block;
-    }
-
 </style>
 
 @endpush

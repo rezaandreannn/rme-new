@@ -1,39 +1,39 @@
 <?php
 
-namespace App\Http\Controllers\Kunjungan\Poliklinik;
+namespace App\Http\Controllers;
 
-use App\Models\Rajal;
-use App\Models\Pasien;
-use App\Models\Antrean;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Services\SimRs\DokterService;
+use App\Services\Emr\PenunjangService;
+use App\Services\SimRs\PendaftaranService;
 
-class PoliklinikPerawatController extends Controller
+class TestingDataController extends Controller
 {
-    protected $view;
-    protected $prefix;
-    protected $rajal;
-    protected $pasien;
-    protected $antrean;
+    
+    protected $dokterService;
+    protected $pendaftaranService;
+    protected $penunjangService;
+ 
 
-    public function __construct(Rajal $rajal)
+
+    public function __construct()
     {
-        $this->rajal = $rajal;
-        $this->view = 'pages.kunjungan.poliklinik.';
-        $this->prefix = 'Pasien';
-        $this->pasien = new Pasien;
-        $this->antrean = new Antrean();
+       
+        $this->dokterService = new DokterService();
+        $this->pendaftaranService = new PendaftaranService();
+        $this->penunjangService = new PenunjangService();
+       
     }
 
     public function index(Request $request)
     {
-        $title = $this->prefix . ' ' . 'Poliklinik';
+        //
         $kode_dokter = $request->input('kode_dokter');
-
-        $dokters = $this->rajal->byKodeDokter();
-        $data = $this->antrean->getDataPasienRajal($kode_dokter);
-
-        return view($this->view . 'index', compact('title', 'data', 'dokters'));
+        $tanggal = $request->input('tanggal');
+        $dokters = $this->dokterService->byDokterSpesialis();
+        $pasiens = $this->pendaftaranService->listPasien($kode_dokter, $tanggal);
+  
+        dd($pasiens);
     }
 
     /**
@@ -41,6 +41,7 @@ class PoliklinikPerawatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD:app/Http/Controllers/Kunjungan/Poliklinik/PoliklinikPerawatController.php
     public function entry($noReg)
     {
         $title = $this->prefix . ' ' . 'Detail';
@@ -50,6 +51,22 @@ class PoliklinikPerawatController extends Controller
         $rencana_perawatan = $this->rajal->rencana_perawatan();
 
         return view($this->view . 'entry', compact('title', 'biodata', 'masalah_perawatan', 'rencana_perawatan'));
+=======
+
+    //  data penunjang EMR
+    public function create($noReg)
+    {
+        // dd('ok penunjang');
+        //
+        // penunjang lab radioologi dan resep
+
+        $resep = $this->penunjangService->resep($noReg);
+        $labs = $this->penunjangService->lab($noReg);
+        $rads = $this->penunjangService->radiologi($noReg);
+        dd($rads);
+
+        // penunjang lab radioologi dan resep
+>>>>>>> main:app/Http/Controllers/TestingDataController.php
     }
 
     /**

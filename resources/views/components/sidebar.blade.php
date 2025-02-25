@@ -11,18 +11,13 @@
             <li class="menu-header">Dashboard</li>
             <li class="{{ Request::is('dashboard') ? 'active' : '' }}"><a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-dashboard"></i> <span>Dashboard</span></a></li>
 
-            {{-- booking operasi --}}
-            {{-- @can('booking operasi')
-            <li class="{{ Request::is('booking-operasi*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('operasi.booking.index') }}"><i class="fas fa-book"></i> <span>Booking Operasi</span></a></li>
-            @endcan --}}
-            {{-- booking operasi --}}
 
             <li class="nav-item dropdown ">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-notes-medical"></i> <span>Kunjungan Pasien</span></a>
 
                 <ul class="dropdown-menu">
                     <li class="">
-                        <a class="nav-link" href="{{ route('poliklinik.index') }}">Poliklinik</a>
+                        <a class="nav-link" href="{{ route('pelayanan.poliklinik.list-px') }}">Poliklinik</a>
                     </li>
                     <li class="">
                         <a class="nav-link" href="">Rawat Inap</a>

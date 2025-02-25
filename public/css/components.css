@@ -2015,6 +2015,13 @@ tr:first-child > td > .fc-day-grid-event {
   background-color: #6777ef;
   color: #fff;
 }
+.wizard-steps button {
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
 .wizard-steps .wizard-step.wizard-step-active:before {
   background-color: #6777ef;
   color: #fff;

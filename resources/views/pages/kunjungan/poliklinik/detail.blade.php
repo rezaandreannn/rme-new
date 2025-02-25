@@ -152,53 +152,22 @@
               <div class="col-12">
                 <div class="card card-primary">
                   <div class="card-header">
-                    <h4>List Pasien</h4>
-                  </div>
-                  <div class="card-body">
                     <div class="row">
                       <div class="col-12 col-lg-8 offset-lg-2">
-                        <div class="wizard-steps">
-                          <div class="wizard-step wizard-step-active" data-step="1">
-                            <div class="wizard-step-icon">
-                              <i class="fas fa-book"></i>
-                            </div>
-                            <div class="wizard-step-label">Riwayat</div>
-                          </div>
-                          <div class="wizard-step" data-step="2">
-                            <div class="wizard-step-icon">
-                              <i class="fas fa-stethoscope"></i>
-                            </div>
-                            <div class="wizard-step-label">Asesmen</div>
-                          </div>
-                          <div class="wizard-step" data-step="3">
-                            <div class="wizard-step-icon">
-                              <i class="fas fa-vial"></i>
-                            </div>
-                            <div class="wizard-step-label">Penunjang</div>
-                          </div>
-                          <div class="wizard-step" data-step="4">
-                            <div class="wizard-step-icon">
-                              <i class="fas fa-briefcase-medical"></i>
-                            </div>
-                            <div class="wizard-step-label">Tindakan</div>
-                          </div>
-                          <div class="wizard-step" data-step="5">
-                            <div class="wizard-step-icon">
-                              <i class="fas fa-notes-medical"></i>
-                            </div>
-                            <div class="wizard-step-label">Resep</div>
-                          </div>
-                          <div class="wizard-step" data-step="6">
-                            <div class="wizard-step-icon">
-                              <i class="fas fa-check"></i>
-                            </div>
-                            <div class="wizard-step-label">Selesai</div>
-                          </div>
+                        <div class="wizard-steps text-center">
+                          <button class="btn btn-outline-primary wizard-step-active" data-step="1">Riwayat</button>
+                          <button class="btn btn-outline-primary" data-step="2">Asesmen</button>
+                          <button class="btn btn-outline-primary" data-step="3">Penunjang</button>
+                          <button class="btn btn-outline-primary" data-step="4">Tindakan</button>
+                          <button class="btn btn-outline-primary" data-step="5">Resep</button>
+                          <button class="btn btn-outline-primary" data-step="6">Selesai</button>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="card-body">
                        <!-- Step 1 -->
-                       <div class="wizard-pane" data-step="1">
+                      <div class="wizard-pane" data-step="1">
                         <div class="col-12 col-md-12">
                             <div class="table-responsive">
                               <table class="table table-bordered table-md">
@@ -562,51 +531,31 @@
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const nextButtons = document.querySelectorAll('.next-step');
-      const prevButtons = document.querySelectorAll('.prev-step');
-      const steps = document.querySelectorAll('.wizard-step');
-      const panes = document.querySelectorAll('.wizard-pane');
-      let currentStep = 1;
-  
-      function showStep(step) {
-        panes.forEach(pane => {
-          pane.classList.toggle('active', parseInt(pane.dataset.step) === step);
-        });
-        steps.forEach(wizardStep => {
-          wizardStep.classList.toggle('wizard-step-active', parseInt(wizardStep.dataset.step) === step);
-        });
-      }
-  
-      nextButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          if (currentStep < steps.length) {
-            currentStep++;
-            showStep(currentStep);
-          }
-        });
+  document.querySelectorAll('.wizard-steps button').forEach(button => {
+    button.addEventListener('click', function() {
+      const step = this.getAttribute('data-step');
+      document.querySelectorAll('.wizard-pane').forEach(pane => {
+        pane.style.display = 'none';
       });
-  
-      prevButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          if (currentStep > 1) {
-            currentStep--;
-            showStep(currentStep);
-          }
-        });
-      });
-  
-      showStep(currentStep);
+      document.querySelector(`.wizard-pane[data-step='${step}']`).style.display = 'block';
+      
+      document.querySelectorAll('.wizard-steps button').forEach(btn => btn.classList.remove('wizard-step-active'));
+      this.classList.add('wizard-step-active');
     });
-  </script>
-  
-  <style>
-    .wizard-pane {
-      display: none;
-    }
-    .wizard-pane.active {
-      display: block;
-    }
-  </style>
+  });
+</script>
+
+<style>
+  .wizard-step-active {
+    background-color: #6777ef;
+    color: white;
+  }
+  .wizard-pane {
+    display: none;
+  }
+  .wizard-pane[data-step="1"] {
+    display: block;
+  }
+</style>
 
 @endpush
